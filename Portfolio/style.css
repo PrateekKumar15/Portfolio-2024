@@ -785,13 +785,15 @@ align-items: center;
 }
 
 .glass {
+    width: 90%;
     transform-style: preserve-3d;
     position: absolute;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     inset: 8px;
-    background: linear-gradient(#1f1f1f1b, #7c7a7ad0);
-    border-radius: 55px;
-    border-top-right-radius: 100%;
+    background: linear-gradient(#1f1f1f1b, #7c7a7a2d);
+    /* border-radius: 55px;
+    border-top-right-radius: 100%; */
+     border-radius:12% 88% 100% 0% / 100% 90% 10% 0%  ;
     border-left: 1px solid white;
     border-bottom: 1px solid white;
     /* transition: 0.5s ease-in-out; */
@@ -902,9 +904,145 @@ align-items: center;
 
 
 
-/* ------------------------------------------------------------------------repeating elements */
+/* ---------------------------------------------Skills----------------------------------------- */
+
+#skills{
+    width: 100%;
+    padding: 8rem 0% 8rem;
+}
 
 
+.skills-wrapper{
+    display: flex;
+     align-items: center;
+    justify-content: space-around;
+    overflow: scroll;
+    gap: 1.5rem;
+height: 300px;
+}
+.skills-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.skill-wrap{
+    perspective: 1000px;
+    padding: 20px;
+    height: 250px;
+    width: 200px;
+    background-color: #1679ab7e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius:10px 80px 10px 80px ;
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out 0s;
+ }
+ 
+ .skill{
+    transform-style: preserve-3d;
+     width: 160px;
+     perspective: 1000px;
+     height: 160px;
+     border-radius: 50%;
+     background: whitesmoke;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+    backdrop-filter: blur(10px);
+    }
+    .outer{
+        transform-style: preserve-3d;
+     
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        /* background-color: aqua; */
+        box-shadow: 6px 6px 10px -1px rgba(0,0,0,.15), 
+        -6px -6px 10px -1px rgba(22, 95, 155, 0.511) ;
+        padding: 20px;
+    }
+    .inner{
+        transform-style: preserve-3d;
+     
+        /* background-color: black; */
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: inset  4px 4px 6px -1px rgba(0,0,0,.1), 
+        inset  -4px -4px 6px -1px rgba(255,255,255,.7),
+        0.5px 0.5px 0px rgba(255,255,255,1),
+        -0.5px -0.5px 0px rgba(0,0,0,.15),
+        0px 12px 10px rgba(0,0,0,0.05) ;
+    }
+    
+    #number{
+        transform-style: preserve-3d;
+        
+        font-size: 40px;
+     font-weight: 600;
+     color: #333;
+     position: relative;
+     top: 50%;
+     left: 50%;
+     transform: translate(-30%, -50%);
+ }
+ 
+ circle{
+    transform-style: preserve-3d;
+     fill: none;
+ stroke:url(#GradientColor);
+ stroke-width: 20px;
+ stroke-dasharray: 472;
+ stroke-dashoffset: 472;
+ animation: anim 2s linear forwards;
+ }
+ 
+ 
+ @keyframes anim {
+     
+    
+     100% {
+          stroke-dashoffset: 67.2; }
+ /*  I am using 20 more to the accurate value to make a visible difference */
+ } 
+ 
+ 
+ .svg1{
+     position: absolute;
+     
+ 
+    
+ }
+ 
+ .lang-name{
+   
+    background-color: var(--main-color);
+    transform-style: preserve-3d;
+     position: relative;
+    font-size: 25px;
+     font-weight: 500;
+    color: var(--text-color);
+    text-decoration: underline;
+    border-radius: 10px;
+    padding: 5px;
+    transform: translate3d(0, 0, 50px);
+ }
+
+ .skill-wrap:hover {
+    transform: rotate3d(1,1,0,30deg);
+ }
+ .skill-wrap:hover .skill{
+    transform: translate3d(0,0,70px);
+ }
+ .skill  .skill-wrap:hover #number{
+    transform: translate3d(0, 0, 50px);
+ }
 
 
 
