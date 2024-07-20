@@ -16,7 +16,14 @@ body{
     background: var(--bg-color) no-repeat center center /cover;
 }
 
+h1,h2,h3, svg path {
+    
+  font-family: "Dancing Script", cursive;
+}
 
+button,a,li {
+    font-family: "Coda", system-ui;
+}
 
 :root{
     --bg-color: #00154f;
@@ -25,11 +32,23 @@ body{
     --text-color: #ffffff;
 }
 
-
+#section-heading{
+    color: transparent;
+    font-size: 70px;
+    /* text-decoration: underline; */
+    -webkit-text-stroke: 3px var(--main-color);
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) */
+}
 
 /* <!-- -----------------------------------------------  Navbar-Section -----------------------------------------------------------> */
 
 .header{
+    font-family: "Coda", system-ui;
     overflow: hidden;
     display: flex;
     justify-content:space-between;
@@ -40,6 +59,7 @@ position: fixed;
    z-index: 999;
     background-color: var(--second-bg-color);
 }
+
 
 
 .navbar{
@@ -685,7 +705,10 @@ blockquote {
 
 /* -------------------------------------Projects----------------------------------------- */
 
-
+.project-heading
+{   position: relative;
+   top: 70px;
+}
 
 .gallery-wrap{
     margin: 10%;
@@ -704,7 +727,7 @@ gap: 20px;
 overflow-x: scroll;
 }
 .gallery .three-holder {
-    perspective: 1100px;
+    perspective: 1000px;
     width: 100%;
     height: 100%;
     display: grid;
@@ -881,18 +904,7 @@ align-items: center;
 
 /* ------------------------------------------------------------------------repeating elements */
 
-#section-heading{
-    color: transparent;
-    font-size: 70px;
-    text-decoration: underline;
-    -webkit-text-stroke: 3px var(--main-color);
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    /* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) */
-}
+
 
 
 

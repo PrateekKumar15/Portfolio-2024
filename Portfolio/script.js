@@ -4,7 +4,7 @@
 //     backSpeed: 100,
 //     backDelay: 500,
 //     loop: true
-// });
+// }); 
 
 function repeatedTyping (a,b,c,d,e,f) {
     new Typed( a, {
@@ -15,6 +15,10 @@ function repeatedTyping (a,b,c,d,e,f) {
         loop: f
     });
 }
+
+
+
+
 
 repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>'], 80,100,500,true)
 
