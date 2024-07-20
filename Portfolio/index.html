@@ -56,6 +56,7 @@
     </header>
     <div class="sidebar">
         <ul>
+            <li><a class="close-menubar" href="#"> <i class='bx bx-up-arrow'></i></a></li>
             <li><a href="#home" class="">Home</a></li>
             <li><a href="#education" class="">Education</a></li>
             <li><a href="#skills" class="">Services</a></li>
@@ -106,10 +107,10 @@
                 tenetur officia ex</p>
 
             <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-gmail'></i></a>
+                <a href="https://www.linkedin.com/in/prateek-kumar-m07-d15-y2003/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/PrateekKumar15" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/prateek_kumar_15/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="mailto: prateekkumar72007@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
             </div>
             <div class="btn-sec">
                 <a href="#" class="btn1">Hire</a>
@@ -324,37 +325,37 @@
                     </li>
                     <li>
                         <i class='bx bxl-gmail'></i>
-                        <span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                        <span>Email:</span> <a href="mailto:prateekkumar72007@gmail.com">Mail me!</a>
                     </li>
                     <li>
                         <i class='bx bx-envelope'> </i>
-                        <span>Website:</span> <a href="#">yoursite.com</a>
+                        <span>Address:</span> <a href="#">Jodhpur,Rajasthan (342030)</a>
                     </li>
                 </ul>
                 <div class="social-media social-media1">
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href = "https://www.linkedin.com/in/prateek-kumar-m07-d15-y2003/" target="_blank"> <i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/PrateekKumar15" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/prateek_kumar_15/" target="_blank"><i class='bx bxl-instagram'></i></a>
                 </div>
             </div>
             <div class="form-wrap">
-                <form action="#" method="POST">
+                <form action="#" method="POST" id="contactForm">
                     <h2 class="form-title">Contact</h2>
                     <div class="form-fields">
                         <div class="form-group fname">
-                            <input type="text" name="firstName" class="" placeholder="First Name">
+                            <input type="text" id="fname"   name="firstName" class="" placeholder="First Name" autocomplete="off">
                         </div>
                         <div class="form-group lname">
-                            <input type="text" class="" name="lastName" placeholder="Last Name">
+                            <input type="text" class="" id ="lname" placeholder="Last Name" autocomplete="off">
                         </div>
                         <div class="form-group email">
-                            <input type="email" class="" name="email" placeholder="Mail">
+                            <input type="email" id="email" class="" name="email" placeholder="Mail" autocomplete ="off">
                         </div>
                         <div class="form-group phone">
-                            <input type="tel" class="" name="phone" placeholder="Phone">
+                            <input type="tel" id="phone" class="" name="phone" placeholder="Phone" autocomplete="off">
                         </div>
                         <div class="form-group message"  >
-                            <textarea name="textMessage" id="" placeholder="Write your message"></textarea>
+                            <textarea name="textMessage" id="message" placeholder="Write your message" autocomplete="off"></textarea>
                         </div>
                     </div>
                     <input type="submit" value="Send Message" class="submit-button">
@@ -385,5 +386,16 @@
     }
     );
 </script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ASHzNrG1YftBZKIx8",
+      });
+   })();
+</script>
+  
 
 </html>

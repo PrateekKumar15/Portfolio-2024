@@ -20,12 +20,14 @@ repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>']
 
     gsap.from('.svg path', { 
         duration: 5,
-        //  opacity: 1,
+         opacity: 0,
          ease: Circ,
-        strokeOffset: 80,
+        // strokeOffset: 80,
         strokeDasharray: 40
          
         })
+
+
 
 // ScrollReveal animations
 // window.sr = ScrollReveal({
@@ -73,4 +75,129 @@ repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>']
 
 // revealToSpan();
 
-document.querySelector('.')
+// ------------------------------Navbar
+
+let menuBar = document.querySelector('.menubar')
+let unmenubar = document.querySelector('.close-menubar')
+const sidebar = document.querySelector('.sidebar')
+
+menuBar.addEventListener('click', function(e) {
+    e.preventDefault()
+      sidebar.style.display = 'flex'
+      menuBar.style.display= 'none'
+        })
+
+unmenubar.addEventListener('click', function (e) {
+e.preventDefault()
+  sidebar.style.display = 'none'
+  menuBar.style.display= 'block'
+})
+
+
+// ---------------------------------Project---------------------------
+let scrollCont = document.querySelector('.gallery')
+let backBtn = document.querySelector('.prevbtn')
+let nextBtn = document.querySelector('.nextbtn')
+
+
+
+scrollCont.addEventListener("wheel", (evt) => {
+    scrollCont.style.scrollBehavior = 'smooth';
+    evt.preventDefault();
+    if(evt.deltaY < 0) {
+        scrollCont.scrollLeft = (Math.floor(scrollCont.scrollLeft/900)*900)-900;
+    } else if (evt.deltaY > 0) {
+        scrollCont.scrollLeft = (Math.floor(scrollCont.scrollLeft/900)*900) + 900;
+    }
+});
+
+nextBtn.addEventListener("click", () => {
+    scrollCont.style.scrollBehavior = 'smooth';
+    scrollCont.scrollLeft += 900;
+});
+backBtn.addEventListener("click", () => {
+    scrollCont.style.scrollBehavior = 'smooth';
+    scrollCont.scrollLeft -= 900;
+});
+
+
+// ---------------------------------------------------------------------- Contact Form------------------------------------------------------------------------
+
+const formSubmit = document.getElementById('contactForm')
+
+function sendMail() {
+
+
+    function validateForm() {
+        // Get form elements by their IDs
+        let fname = document.getElementById('fname').value.trim();
+        let  lname = document.getElementById('lname').value.trim();
+        let  message = document.getElementById('message').value.trim();
+        let  email = document.getElementById('email').value.trim();
+        let  phone = document.getElementById('phone').value.trim();
+        
+        // Regular expression for email validation
+        let  emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Regular expression for phone number validation (digits only)
+        let  phonePattern = /^\d{10}$/; // Adjust as necessary for your requirements
+    
+        // Check if any field is empty
+        if (!fname || !lname || !message || !email || !phone) {
+            alert('All fields are required.');
+            return false;
+        }
+    
+        // Check if email is valid
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+    
+        // Check if phone number is valid
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid 10-digit phone number.');
+            return false;
+        }
+    
+        return true;
+    }
+
+if(validateForm()) { 
+
+ let params = {
+        to_name: "Prateek",
+        fname: document.getElementById("fname").value,
+        lname: document.getElementById("lname").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+    };
+
+function reset (){
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("message").value = "";
+}
+
+    const serviceID = "service_5fpcjm9";
+    const templateID = "template_3brxu6o";
+  
+      emailjs.send(serviceID, templateID, params)
+      .then(res=>{
+         reset()
+          console.log(res);
+          alert("Your message sent successfully!!")
+  
+      })
+      .catch(err=>console.log(err));
+  
+  }
+}
+// Call the function to send the email
+    formSubmit.addEventListener('submit',function (event){
+        event.preventDefault();
+        sendMail();
+    });
+  
