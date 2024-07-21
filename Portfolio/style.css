@@ -16,12 +16,14 @@ body{
     background: var(--bg-color) no-repeat center center /cover;
 }
 
-h1,h2,h3, svg path {
+h1,h2,h3{
     
   font-family: "Dancing Script", cursive;
 }
-
-button,a,li {
+p,span{
+    font-family: "Forum", serif;
+}
+button,a,li,input,textarea  {
     font-family: "Coda", system-ui;
 }
 
@@ -785,6 +787,7 @@ align-items: center;
 }
 
 .glass {
+    perspective: 1000px;
     width: 90%;
     transform-style: preserve-3d;
     position: absolute;
@@ -793,7 +796,9 @@ align-items: center;
     background: linear-gradient(#1f1f1f1b, #7c7a7a2d);
     /* border-radius: 55px;
     border-top-right-radius: 100%; */
-     border-radius:12% 88% 100% 0% / 100% 90% 10% 0%  ;
+     /* border-radius:12% 88% 100% 0% / 100% 90% 10% 0%  ; */
+     border-radius:12% 88% 89% 11% / 80% 90% 10% 20%; 
+    
     border-left: 1px solid white;
     border-bottom: 1px solid white;
     /* transition: 0.5s ease-in-out; */
@@ -931,7 +936,7 @@ height: 300px;
     padding: 20px;
     height: 250px;
     width: 200px;
-    background-color: #1679ab7e;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -948,13 +953,12 @@ height: 300px;
      perspective: 1000px;
      height: 160px;
      border-radius: 50%;
-     background: whitesmoke;
+     background: rgb(255, 255, 255);
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
      position: relative;
-    backdrop-filter: blur(10px);
     }
     .outer{
         transform-style: preserve-3d;
@@ -969,7 +973,7 @@ height: 300px;
     }
     .inner{
         transform-style: preserve-3d;
-     
+     perspective: 1000px;
         /* background-color: black; */
         width: 120px;
         height: 120px;
@@ -986,7 +990,7 @@ height: 300px;
         
         font-size: 40px;
      font-weight: 600;
-     color: #333;
+     color: var(--bg-color);
      position: relative;
      top: 50%;
      left: 50%;
@@ -1000,17 +1004,63 @@ height: 300px;
  stroke-width: 20px;
  stroke-dasharray: 472;
  stroke-dashoffset: 472;
- animation: anim 2s linear forwards;
+ }
+
+
+  .skill-wrap1 circle{
+    animation: anim1 2s linear forwards;
+ }
+ .skill-wrap2 circle{
+    animation: anim2 2s linear forwards;
+ }
+ .skill-wrap3 circle{
+    animation: anim3 2s linear forwards;
  }
  
+ .skill-wrap4 circle{
+    animation: anim4 2s linear forwards;
+ }
+
+ .skill-wrap5 circle{
+    animation: anim5 2s linear forwards;
+ }
+
+ @keyframes anim1 {
+     
+    
+     100% {
+          stroke-dashoffset: 185.2; }
+ /*  I am using 20 more to the accurate value to make a visible difference */
  
- @keyframes anim {
+     }
+ @keyframes anim2 {
      
     
      100% {
           stroke-dashoffset: 67.2; }
  /*  I am using 20 more to the accurate value to make a visible difference */
  } 
+ @keyframes anim3 {
+     
+    
+     100% {
+          stroke-dashoffset: 67.2; }
+ /*  I am using 20 more to the accurate value to make a visible difference */
+ } 
+ @keyframes anim4 {
+     
+    
+     100% {
+          stroke-dashoffset: 114.4; }
+ /*  I am using 20 more to the accurate value to make a visible difference */
+ } 
+ @keyframes anim5 {
+     
+    
+     100% {
+          stroke-dashoffset: 90.8; }
+ /*  I am using 20 more to the accurate value to make a visible difference */
+ }  
  
  
  .svg1{
@@ -1022,26 +1072,28 @@ height: 300px;
  
  .lang-name{
    
-    background-color: var(--main-color);
+    background-color: #ffffff2d;
     transform-style: preserve-3d;
-     position: relative;
     font-size: 25px;
      font-weight: 500;
     color: var(--text-color);
     text-decoration: underline;
     border-radius: 10px;
-    padding: 5px;
-    transform: translate3d(0, 0, 50px);
+     padding: 5px;
+    backdrop-filter: blur(30px);
  }
 
  .skill-wrap:hover {
-    transform: rotate3d(1,1,0,30deg);
+    transform: rotate3d(1,1,0,30deg) scale(1.1);
  }
  .skill-wrap:hover .skill{
+    transform: translate3d(0,0,100px);
+ }
+ .skill-wrap:hover  .lang-name{
     transform: translate3d(0,0,70px);
  }
- .skill  .skill-wrap:hover #number{
-    transform: translate3d(0, 0, 50px);
+ .skill-wrap:hover #number{
+    transform: translate3d(-30%, -50%, 70px);
  }
 
 
@@ -1148,7 +1200,7 @@ background: var(--main-color);
 .form-title{
     text-align: center;
     margin-left: 23px;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 0.5px;
     color: var(--text-color);
 }
@@ -1164,9 +1216,8 @@ background: var(--main-color);
 
 
 .form-fields{
-    
     display: grid;
-    grid-gap: .5rem;
+    grid-gap: .3rem;
     grid-template-areas: 
     'fname message'
     'lname message'

@@ -1,3 +1,7 @@
+
+
+// ---------------------------------- Home Section ----------------------------
+
 // const ani0 = new Typed('.animation', {
 //     strings: ['<i>FrontEnd Developer</i>', '<i>Web Designer</i>'],
 //     typeSpeed: 80,
@@ -5,6 +9,8 @@
 //     backDelay: 500,
 //     loop: true
 // }); 
+
+
 
 function repeatedTyping (a,b,c,d,e,f) {
     new Typed( a, {
@@ -26,7 +32,6 @@ repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>']
         duration: 5,
          opacity: 0,
          ease: Circ,
-        // strokeOffset: 80,
         strokeDasharray: 40
          
         })
@@ -79,7 +84,7 @@ repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>']
 
 // revealToSpan();
 
-// ------------------------------Navbar
+// ----------------------------------------------Navbar
 
 let menuBar = document.querySelector('.menubar')
 let unmenubar = document.querySelector('.close-menubar')
@@ -124,6 +129,31 @@ backBtn.addEventListener("click", () => {
     scrollCont.scrollLeft -= 900;
 });
 
+
+
+//-----------------------------------------------Skills----------------------------------------- 
+addEventListener ('DOMContentLoaded',function () {
+    function progressBar (a,b,c) {
+        // Get all progress bars
+        const number = document.querySelector(a);
+
+        let counter =0
+        let interval =  setInterval(()=>{
+            if (counter == b) {
+                clearInterval(interval)
+            } else {
+                 counter++
+            number.textContent = counter + '%'
+            }
+
+        },c)
+    }
+    progressBar('.number1', 65,30)
+    progressBar('.number2', 90,23)
+    progressBar('.number3', 90,23)
+    progressBar('.number4', 85,25)
+    progressBar('.number5', 80,27)
+})
 
 // ---------------------------------------------------------------------- Contact Form------------------------------------------------------------------------
 
