@@ -26,7 +26,7 @@ function repeatedTyping (a,b,c,d,e,f) {
 
 
 
-repeatedTyping('.animation',['<i>FrontEnd Developer</i>', '<i>Web Designer</i>'], 80,100,500,true)
+repeatedTyping('.animation',['<i>Engineer</i>','<i>FrontEnd Developer</i>', '<i>Web Designer</i>'], 80,100,500,true)
 
     gsap.from('.svg path', { 
         duration: 5,
@@ -105,28 +105,36 @@ e.preventDefault()
 
 // ---------------------------------Project---------------------------
 let scrollCont = document.querySelector('.gallery')
-let backBtn = document.querySelector('.prevbtn')
-let nextBtn = document.querySelector('.nextbtn')
+let skillsScroll = document.querySelector('.skills-wrapper')
+let backBtn = document.querySelectorAll('.prevbtn')
+let nextBtn = document.querySelectorAll('.nextbtn')
+
+let a = document.getElementsByClassName("gallery")
+
+console.log(a);
 
 
 
-scrollCont.addEventListener("wheel", (evt) => {
-    scrollCont.style.scrollBehavior = 'smooth';
-    evt.preventDefault();
-    if(evt.deltaY < 0) {
-        scrollCont.scrollLeft = (Math.floor(scrollCont.scrollLeft/900)*900)-900;
-    } else if (evt.deltaY > 0) {
-        scrollCont.scrollLeft = (Math.floor(scrollCont.scrollLeft/900)*900) + 900;
-    }
+
+nextBtn[1].addEventListener("click", () => {
+    skillsScroll.style.scrollBehavior = 'smooth';
+    skillsScroll.scrollLeft += 50;
+});
+backBtn[1].addEventListener("click", () => {
+    skillsScroll.style.scrollBehavior = 'smooth';
+    skillsScroll.scrollLeft -= 50;
 });
 
-nextBtn.addEventListener("click", () => {
+
+
+
+nextBtn[0].addEventListener("click", () => {
     scrollCont.style.scrollBehavior = 'smooth';
-    scrollCont.scrollLeft += 900;
+    scrollCont.scrollLeft += 50;
 });
-backBtn.addEventListener("click", () => {
+backBtn[0].addEventListener("click", () => {
     scrollCont.style.scrollBehavior = 'smooth';
-    scrollCont.scrollLeft -= 900;
+    scrollCont.scrollLeft -= 50;
 });
 
 
