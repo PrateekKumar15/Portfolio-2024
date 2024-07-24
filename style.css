@@ -627,7 +627,7 @@ align-items: center;
 		content: '';
 		background: linear-gradient(to bottom , red,blue);
 		width: 5px;
-		height: 52%;
+		height: 50%;
 		position: absolute;
         top: 20%;
 		left: 50%;
@@ -778,8 +778,8 @@ align-items: center;
     .timeline::before {
 		content: '';
 		background: linear-gradient(to bottom , red,blue);
-		height: 53%;
-        top: 18.3%;
+		height: 51%;
+        top: 18.7%;
 		
 	}
     
@@ -790,8 +790,8 @@ align-items: center;
             &::before {
               
                 left: 50px;
-                top: 21%;
-                height: 51%;
+                top: 21.6%;
+                height: 50%;
             }
           
     
@@ -848,7 +848,7 @@ align-items: center;
 }
 @media screen and (max-width: 730px){
     .timeline::before {
-        top: 20.5%;
+        top: 20.8%;
 		
 	}
     .timeline-content {
@@ -880,8 +880,8 @@ p{
 @media screen and (max-width: 484px){
     .timeline::before {
 		
-        top: 15.3%;
-        height: 54%;
+        top: 15.5%;
+        height: 53%;
 		
 	}
 }
@@ -889,8 +889,8 @@ p{
 
 @media screen and (max-width: 400px){
     .timeline::before {
-        top: 16.3%;
-		
+        top: 16.1%;
+		height: 52.5%;
 	}
     .timeline-content {
 .date{
@@ -1153,10 +1153,9 @@ border-radius: 5px;
       
     }
     .gallery .three-holder {
-       
+       height: 100%;
         grid-template-columns: 250px 250px 250px ;
-      
-       }
+    }
     
        .content {
         padding: 30px 60px 0px 10px;
@@ -1200,7 +1199,7 @@ border-radius: 5px;
         width: 90%;
         height:200px;
         display: flex;
-    gap: 20px;
+    gap: 10px;
     overflow-x: scroll;
     }
     .gallery .three-holder {
@@ -1209,7 +1208,7 @@ border-radius: 5px;
         height: 100%;
         display: grid;
         grid-template-columns: 200px 200px 200px ;
-        grid-gap:10px ;
+        grid-gap:5px ;
     flex: none;
        }
     
@@ -1230,7 +1229,6 @@ border-radius: 5px;
     
     .footer .link a {
          font-size: 7px;
-       
     }
     
     
@@ -1239,6 +1237,7 @@ border-radius: 5px;
         gap: 3px;
     }
     .footer .social i {
+       
         font-size: 15px;
     }
     
@@ -1246,6 +1245,9 @@ border-radius: 5px;
         display: inline-block;
         width: 15px;
         height: 15px;
+        position: absolute;
+        bottom: -10px;
+        right: -35px;
     }
 
 
