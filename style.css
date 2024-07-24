@@ -1069,7 +1069,7 @@ border-radius: 5px;
    
 }
 
-.footer .link {
+.footer .link a {
     transition: 0.2s ease-in-out;
     font-size: 14px;
     color: var(--main-color);
@@ -1172,7 +1172,7 @@ border-radius: 5px;
         font-size: 15px;
     }
     
-    .footer .link {
+    .footer .link a {
        
         font-size: 10px;
        
@@ -1208,8 +1208,8 @@ border-radius: 5px;
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: 200px 200px 250px ;
-        grid-gap:20px ;
+        grid-template-columns: 200px 200px 200px ;
+        grid-gap:10px ;
     flex: none;
        }
     
@@ -1228,7 +1228,7 @@ border-radius: 5px;
         height: 60px;
     }
     
-    .footer .link {
+    .footer .link a {
          font-size: 7px;
        
     }
@@ -1239,13 +1239,13 @@ border-radius: 5px;
         gap: 3px;
     }
     .footer .social i {
-        font-size: 18px;
+        font-size: 15px;
     }
     
     .footer .social .social_icons {
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
 
 
