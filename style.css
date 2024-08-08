@@ -162,7 +162,7 @@ position: fixed;
 }
 
 .header .logo a:hover{
-    font-size: 35px;
+    /* font-size: 35px; */
     color: transparent;
     background :linear-gradient( to right,red,rgb(93, 186, 241));
     -webkit-background-clip: text;
